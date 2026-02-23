@@ -1,0 +1,46 @@
+
+Javascript Execution Context
+
+Code --> Global EC --> this
+
+JS is Single Threaded    
+
+EC : 1. Global EC
+     2. Function EC
+     3. Eval EC
+
+Js code runs in two phase, one is Memoery Creation Phase also called as Creation Phase which allocates the space to the variables
+and another pahse is Execution Phase which does the task of execution
+
+
+eg.
+
+let val1 = 10
+let val2 = 5
+function addNum(num1, num2){
+    let total = num1 + num2
+    return total
+}
+let result1 = addNum(val1, val2)
+let result2 = addNum(10, 2)
+
+
+
+Steps for Code Execution:
+
+1. Global Execution at very first is allocated into 'this'
+
+2. Memory Creation Phase: Suppose we have val1 which will have 'undefined' at initial, val2 also have 'undefined'
+        Add num variable after val1 and val2 will not have 'undefined' but will have definition
+        result1 -> Undefined
+        result2 -> Undefined
+        The above given is cycle one
+
+3. Execution Phase:
+        val1 --> 10
+        val2 --> 5
+        addNum --> [Executional Context (New Variable Environment + Execution Thread)] --> Sand Box
+        For each sand box there are again same phases for execution
+        The Execution Context get deleted once it's work is over
+
+        Call Stack for methods (LIFO)
