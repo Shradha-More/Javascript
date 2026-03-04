@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+<!-- DOM Diagram -->
+
+<!-- Window=> Document=> HTML=> 1. Head => a. title => text node  -->
+<!--                                    => b. meta => attribute   -->
+<!--                            2. Body => a.div => h1 => attribute   -->
+<!--                                                   => text node   -->
+<!--                                             => p => text node    -->                                         
+<!--                                             => attribute         -->
+
+
+
+<!-- You can even change the element of the webpage by inspecting the page and applying the code through your local machine -->
+
+<!-- We can get or set the attributes -->
+
+<!-- We can style or unstyle the page -->
+
+<!-- Sometimes we have to extract values from webpage, that can also be carried out within console after inspecting using innerText, innerContent, innerHTML -->
+
+<!-- 
+
+-> DOM[All Document elements are objects in javascript] 
+    -> window is a global object which contains document object
+    -> console.dir(document) gives the document object as it is
+    -> document.baseURI - give the base url
+    -> document.getElementById() - used to select the element with id
+
+    -> targeting the elements [elements ko catch karna]
+    -> document.getElementByClassName() //returns HTML collection
+
+    -> element.className - gives the class name [used in react]
+    -> element.id = gives the id
+    -> element.getAttribute('att_name')
+    -> element.setAttribute('att_name','att_value') - overwrites the pre-existing attribute
+    -> element.style.color = 'red'
+
+    -> element.textContent =  gives the display:none element too
+    -> element.innerText = does not give the display:none elements
+    -> element.innerHTML = gives the html too
+
+    -> element.querySelector('any') = it can take any selector like we give in css
+    -> We can also use querySelector or any selecting method on any element which contains some child nodes
+    -> We can use forEach on NodeList which comes from querySelectorAll()
+    -> NODELIST AND HTML COLLECTION are not pure arrays but nodelist has forEach() method
+    -> Html collection do not have forEach() so it needs to be converted to array first
+    -> Both nodelist & htmlcollection can be converted into array by using Array.from(nodeList/HtmlCollection)
+
+-->
+
+<!-- 
+
+Understanding JavaScript and its manipulation of the page
+Capturing and manipulating elements using JavaScript
+Accessing elements in DOM using different selectors
+Get Attribute allows you to retrieve the value of a specific attribute.
+Understanding DOM selectors and NodeList in JavaScript
+The main difference between innerHTML and textContent is that innerHTML includes both the visible text and the HTML tags, while textContent only includes the visible text.
+Understanding HTML collection and querying in JavaScript
+Using DOM selectors to select elements by ID and class
+How to select and manipulate DOM elements
+DOM selectors NodeList and HTMLCollection
+The difference between QuerySelector and QuerySelectorAll is the type of data they return.
+Understanding DOM selectors in JavaScript
+Converting DOM selectors NodeList and HTMLCollection
+Using DOM selectors in JavaScript
+Learn to manipulate DOM selectors NodeList and HTMLCollection in JavaScript
+Handling HTML Collection and NodeList in JavaScript
+
+-->
